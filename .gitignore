@@ -1,2 +1,5 @@
 native-app-win32/source/FileExplorerLauncher/*/Debug
 native-app-win32/source/FileExplorerLauncher/*/Release
+*.vsidx
+*.ipch
+*.db
