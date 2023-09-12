@@ -1,20 +1,20 @@
 # Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+The project includes an Edge extension and a standalone Win32 binary that work together to allow the user to open a file://... link in Windows File Explorer.
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+# Installation
+As the extension is not available on Microsoft Edge Add-ons website yet, it needs to be installed manually.
+Follow the steps below to instlal the extension manually:
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+1. Get a clone of this repository.
+2. Start Microsoft Edge browser and navigate to edge://extensions/
+3. Enable **Developer mode** by clicking the toggle on the side menu.
+4. Click on **Load unpacked** button and choose folder **native-app-win32**.
+5. Go to folder **native-app-win32** and run **register-host-app.bat** to register the host application. In case the repository folder has been moved to a new location, the registration must be updated by running **register-host-app.bat** again in the new location. 
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+# Build
+The extension does not need to be built. The JS scripts are loaded and executed by the browser.
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+The standalone application needs to be built with a C++ compiler. In the source folder a solution and a project file can be found for Microsoft Visual Studio IDE. It is a very straighforward project that does not require any third-party libraries. Only Windows standard built-in libraries are used. 
+
+# Copyright
+Copyright (c) 2023, Auckland Transport. All right reserves.

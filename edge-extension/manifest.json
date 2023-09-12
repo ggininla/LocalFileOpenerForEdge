@@ -1,0 +1,30 @@
+{
+    "name": "Local File and Folder Opener Extension",
+    "version": "1.0.0.0",
+    "manifest_version": 3,
+    "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAz3+mq7WINZK3rJPwGVGAJrs68DHPyX2J/I9jKGqvChLOM4vcuIz+odeytjMPCF9EF5jXHVEMeHbRC9zd7kx0ORIaqXdaWtNu+SczkR1hkrrt2XcZwrNFKAbalXtMr08VOhV+YcDaxl+mmH99u4dXHiYhyHqn2RbcoJPruvX8xv3gG8OBM6hE/CSPhmOL6JaMXR56rkhCgVszetEoRRwFGVRcrZZBz8lLi6RgZqPZi37c8VcRDpBCuUHw/VGQZf/8i9EPjo//Uj86r353M9MGvcSVTHh5SBbYdOn4zYjRdVSCPJ16XOe+0Uopy+w8MBrsz/y8vRBEHCcLPUFs5XXNDwIDAQAB",
+    "permissions": [
+        "scripting",
+        "nativeMessaging"
+    ],
+    "description": "An extension to launch File Explorer for local files/folders.",
+    "icons": {
+        "128": "icons/icon.png"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "all_frames": true,
+            "matches": [
+                "http://*/*",
+                "https://*/*",
+                "file://*"
+            ],
+            "js": [
+                "content-script.js"
+            ]
+        }
+    ]
+}

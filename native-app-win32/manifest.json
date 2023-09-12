@@ -1,0 +1,7 @@
+{
+    "name": "nz.govt.at.file_explorer_launcher",
+    "description": "A gateway application that launches Windows File Explorer and exits.",
+    "path": "bin/FileExplorerLauncher.exe",
+    "type": "stdio",
+    "allowed_origins": ["chrome-extension://fmeilkmnhlkcflgepgmogjkoomddpbdf/"]
+}
