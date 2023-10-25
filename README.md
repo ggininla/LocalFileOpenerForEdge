@@ -9,7 +9,7 @@ Follow the steps below to install the extension manually:
 2. Start Microsoft Edge browser and navigate to edge://extensions/
 3. Enable **Developer mode** by clicking the toggle on the side menu.
 4. Click on **Load unpacked** button and choose folder **edge-extension**.
-5. Go to folder **native-app-win32** and run **register-host-app.bat** to register the host application. In case the repository folder has been moved to a new location, the registration must be updated by running **register-host-app.bat** again in the new location. 
+5. Go to folder **native-app-win32** and run **register-host-app.bat** to register the host application. In case the repository folder has been moved to a new location, the registration must be updated by running **register-host-app.bat** again in the new location. Alternatively, use the [installer](https://github.com/ggininla/LocalFileOpenerForEdge/blob/main/native-app-win32/bin/FileExplorerLauncherForEdge-Installer-Win64-1.0.0.exe) to do system-wiide installation.
 
 # Build
 The extension does not need to be built. The JS scripts are loaded and executed by the browser.
