@@ -2,7 +2,20 @@
 The project includes an **Edge extension** and a **standalone Win32 binary** that work together to allow the user to open a `file://...` link in **Windows File Explorer**.
 
 # Installation
-As the extension is not available on Microsoft Edge Add-ons website yet, it needs to be installed manually.
+
+There are two options to install the extension.
+
+## Using the Installer
+
+1. Download and run the [installer](https://github.com/ggininla/LocalFileOpenerForEdge/blob/main/native-app-win32/bin/FileExplorerLauncherForEdge-Installer-Win64-1.0.0.exe) for system-wiide installation.
+2. Start or restart Microsoft Edge. Click on **Turn on extension** when prompted.
+3. Visit edge://extensions and click on the details of **Local File and Folder Opener Extension** extension.
+4. Enable **Allow access to URLs** as the extension will need to access `file://` resources.
+
+## Side Load
+
+**The steps shown in this section is for development and testing only.**
+
 Follow the steps below to install the extension manually:
 
 1. Get a clone of this repository.
@@ -11,7 +24,7 @@ Follow the steps below to install the extension manually:
 4. Click on **Load unpacked** button and choose folder **edge-extension**.
 5. Go to folder **native-app-win32** and run **register-host-app.bat** to register the host application. In case the repository folder has been moved to a new location, the registration must be updated by running **register-host-app.bat** again in the new location. Alternatively, use the [installer](https://github.com/ggininla/LocalFileOpenerForEdge/blob/main/native-app-win32/bin/FileExplorerLauncherForEdge-Installer-Win64-1.0.0.exe) to do system-wiide installation.
 
-# Build
+# Build from Source
 The extension does not need to be built. The JS scripts are loaded and executed by the browser.
 
 The standalone application needs to be built with a C++ compiler. In the source folder a solution and a project file can be found for Microsoft Visual Studio IDE. It is a very straighforward project that does not require any third-party libraries. Only Windows standard built-in libraries are used. 
